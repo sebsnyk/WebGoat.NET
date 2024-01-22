@@ -197,3 +197,7 @@ WebGoat/Configuration/*.config
 # Trash Files #
 ###############
 .DS_Store
+
+.idea
+.dccache
+.vscode

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web.UI;
+using Microsoft.Security.Application;
 
 namespace OWASP.WebGoat.NET.WebGoatCoins
 {
@@ -7,6 +8,7 @@ namespace OWASP.WebGoat.NET.WebGoatCoins
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // lblFullName.Text = Sanitizer.GetSafeHtml(Session["buy_full_name"].ToString());
             lblFullName.Text = Session["buy_full_name"].ToString();
             lblCountry.Text = Session["buy_country"].ToString();
             lblAddress.Text = Session["buy_address"].ToString();
