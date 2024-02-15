@@ -50,6 +50,24 @@ namespace OWASP.WebGoat.NET
     	{
 	        try
 	        {
+				// Examples for fixing.
+				// // We always start with a base directory.
+				// string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+
+				// // # Continue with the full path, but ensure it's in a valid context / surrounding folder.
+				// _fullPath = Path.GetFullPath(_fullPath);
+				// if (!_fullPath.StartsWith(baseDirectory, StringComparison.OrdinalIgnoreCase))
+				// {
+				// 	throw new UnauthorizedAccessException("Access to the path is denied.");
+				// }
+
+				// // # Work with the base directory and create a new path. Then, check the path for invalid characters.
+				// if (_fileName.IndexOfAny(Path.GetInvalidFileNameChars()) != -1)
+				// {
+				// 	throw new ArgumentException("The file name contains invalid characters.");
+				// }
+				// _fullPath = Path.Combine(baseDirectory, _fileName);
+
 	            FileStream myFile =	new FileStream(_fullPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 	            BinaryReader br = new BinaryReader(myFile);
 	            try
