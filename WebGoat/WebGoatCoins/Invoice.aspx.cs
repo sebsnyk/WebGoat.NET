@@ -17,7 +17,11 @@ namespace OWASP.WebGoat.NET.WebGoatCoins
             lblPrice.Text = Session["buy_product_price"].ToString();
             lblSubTotal.Text = Session["buy_product_price"].ToString();
             lblShippingRate.Text = Session["buy_shipping_price"].ToString();
-            lblTotal.Text = Session["buy_total_price"].ToString();
+            if (lblCountry.Text == "UK") {
+                lblTotal.Text = Session["buy_total_price_gbp"].ToString();
+            } else {
+                lblTotal.Text = Session["buy_total_price_eur"].ToString();
+            }
         }
     }
 }

@@ -113,6 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="OWASP.AntiSamy" Version="1.1.0" />
+    <PackageReference Include="Pubnub" Version="6.18.0" />
   </ItemGroup>
 
   <ItemGroup>
